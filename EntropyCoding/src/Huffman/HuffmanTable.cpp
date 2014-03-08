@@ -60,7 +60,7 @@ void writeHuffmanCodeValues(codetable **ct, char *memblock, char *opFile) {
 	writePrepare(opFile);
 
 	//write the overhead indicating the frequency of each symbol.
-	//writeHeader();
+	writeHeader();
 	for (int i = 0; i < FileSizeinBytes; i++) {
 		int pos = LetterMap[memblock[i]];
 		unsigned long int code = ct[pos]->getCode();
